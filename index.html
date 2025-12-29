@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لعبة المخبزة 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>لعبة المخبزة</h1>
+
+<div class="stats">
+  <p>💰 المال: <span id="money">0</span> دج</p>
+  <p>⭐ المستوى: <span id="level">1</span></p>
+</div>
+
+<div class="bakery">
+  <!-- الخلفية -->
+  <div class="background"></div>
+
+  <!-- الأفران والطاولات -->
+  <img src="images/oven_bakery.png" alt="فرن الخبز والحلويات" class="oven-bakery">
+  <img src="images/chicken_oven.png" alt="فرن الدجاج" class="chicken-oven">
+  <img src="images/work_table.png" alt="طاولة العمل" class="work-table">
+
+  <!-- الزبائن -->
+  <img src="images/customer1.png" alt="زبون 1" class="customer" id="customer1">
+  <img src="images/customer2.png" alt="زبون 2" class="customer" id="customer2">
+
+  <!-- اللاعب -->
+  <img src="images/worker.png" alt="عامل المخبزة" class="worker">
+</div>
+
+<!-- المنتجات -->
+<div class="shop">
+  <img src="images/bread.png" alt="خبز" class="product" onclick="sell(1000, this)">
+  <img src="images/pastry.png" alt="مقروض" class="product" onclick="sell(4000, this)">
+  <img src="images/assban.png" alt="عصبان" class="product" onclick="sell(15000, this)">
+  <img src="images/chicken.png" alt="دجاج" class="product" onclick="sell(50000, this)">
+</div>
+
+<!-- واجهة التفاعل -->
+<div id="ovenAction" class="action-menu">تشغيل الفرن</div>
+<div id="stockAction" class="action-menu">شراء المكونات</div>
+
+<!-- الأصوات -->
+<audio id="saleSound" src="sounds/sale_new.mp3"></audio>
+<audio id="bellSound" src="sounds/bell.mp3"></audio>
+<audio id="radio" src="sounds/radio.mp3" autoplay loop></audio>
+<audio id="customerVoice" src="sounds/customerVoice.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
